@@ -23,8 +23,7 @@ map = new mapboxgl.Map({
 });
 map.on('load', function () {
   map.addSource('gsi-address', {
-    tiles: ['http://localhost:8000/{z}/{x}/{y}.mvt'],
-    //tiles: ['https://hfu.github.io/gsi-address-vt/{z}/{x}/{y}.mvt'],
+    tiles: ['https://hfu.github.io/gsi-address-vt/{z}/{x}/{y}.mvt'],
     attribution: "<a target='_blank' href='https://hfu.github.io/gsi-address-vt/notice.html'>平28情使第679号</a>",
     type: 'vector', maxzoom: 14
   });
