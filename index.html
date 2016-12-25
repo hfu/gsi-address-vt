@@ -4,8 +4,8 @@
 <meta charset='utf-8' />
 <title>住居表示住所バイナリベクトルタイル表示サイト</title>
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.css' rel='stylesheet' />
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.29.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.29.0/mapbox-gl.css' rel='stylesheet' />
 <link href='https://www.mapbox.com/base/latest/base.css' rel='stylesheet' />
 <style>
 body { margin:0; padding:0; }
@@ -29,8 +29,20 @@ map.on('load', function () {
   });
 
   map.addLayer({
+    'id': 'gsi-address-pt', 'type': 'circle',
+    'source': 'gsi-address', 'source-layer': 'gsi-address',
+    'minzoom': 0, 'maxzoom': 17,
+    'paint': {
+      'circle-color': '#ff0000',
+      'circle-radius': {'stops': [[10, 1], [14, 2]]},
+      'circle-stroke-width': 0.1,
+      'circle-stroke-color': '#ffffff'
+    }
+  })
+  map.addLayer({
     'id': 'gsi-address', 'type': 'symbol',
     'source': 'gsi-address', 'source-layer': 'gsi-address',
+    'minzoom': 17, 'maxzoom': 22,
     'paint': {
       'text-color': '#ff0000',
       'text-halo-width': 1,
