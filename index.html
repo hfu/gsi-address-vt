@@ -46,7 +46,7 @@ map.on('load', function () {
 map.on('click', function(e) {
   var features = map.queryRenderedFeatures(e.point, {});
   if (!features.length) return;
-  var s = features.length + ' features.<br/>';
+  var s = '';
   for(var i in features) {
     s += '<table><tr>'
     for(var j in features[i].properties) {
