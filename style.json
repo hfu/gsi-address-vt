@@ -1,0 +1,1 @@
+{"version":8,"name":"gsi-address","sources":{"gsi-address":{"type":"vector","tiles":"https://hfu.github.io/gsi-vt-address/{z}/{x}/{y}.mvt","minzoom":0,"maxzoom":14,"attribution":"平28情使第679号","center":[130.418701,33.550551,14.0],"bounds":[127.653593,26.133426,144.613412,45.521803]}},"layers":[{"id":"gsi-address","type":"vector","source":"gsi-address"}]}
